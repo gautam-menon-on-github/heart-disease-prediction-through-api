@@ -1,0 +1,2 @@
+model-service:
+  base-url: http://model-service:8000
