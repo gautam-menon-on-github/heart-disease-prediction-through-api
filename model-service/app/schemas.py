@@ -11,7 +11,7 @@ class HeartDiseaseData(BaseModel):
     resting_ecg: Literal["Normal", "ST", "LVH"] = Field(..., description="resting electrocardiogram results")
     max_hr: int = Field(..., description="maximum heart rate achieved", ge=60, le=202)
     exercise_angina: Literal["Y", "N"] = Field(..., description="exercise-induced angina")
-    oldpeak: float = Field(..., description="oldpeak = ST", ge=0)
+    oldpeak: float = Field(..., description="oldpeak = ST [numeric value measured in depression]", ge=0)
     st_slope: Literal["Up", "Flat", "Down"] = Field(..., description="slope of peak exercise ST segment")
 
 class PredictionOutput(BaseModel):
